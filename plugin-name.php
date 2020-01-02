@@ -65,7 +65,7 @@ if (!defined('PLUGINNAME_VERSION')) {
           
             wp_enqueue_script(
                 'plugin_name_vue_loaded',
-                PLUGINNAME_URL . 'dist/js/boot.js',
+                PLUGINNAME_URL . 'assets/js/boot.js',
                 array( 'jquery' ),
                 PLUGINNAME_VERSION,
                 true
