@@ -24,31 +24,31 @@ class Menu
             $title,
             $title,
             $menuPermission,
-            'plugun_name.php',
+            'plugin_name.php',
             array($this, 'render'),
             'dashicons-admin-site',
             25
         );
 
-        $submenu['plugun_name.php']['my_profile'] = array(
+        $submenu['plugin_name.php']['my_profile'] = array(
             __('Plugin Dashboard', 'textdomain'),
             $menuPermission,
-            'admin.php?page=plugun_name.php#/',
+            'admin.php?page=plugin_name.php#/',
         );
-        $submenu['plugun_name.php']['settings'] = array(
+        $submenu['plugin_name.php']['settings'] = array(
             __('Settings', 'textdomain'),
             $menuPermission,
-            'admin.php?page=plugun_name.php#/settings',
+            'admin.php?page=plugin_name.php#/settings',
         );
-        $submenu['plugun_name.php']['supports'] = array(
+        $submenu['plugin_name.php']['supports'] = array(
             __('Supports', 'textdomain'),
             $menuPermission,
-            'admin.php?page=plugun_name.php#/supports',
+            'admin.php?page=plugin_name.php#/supports',
         );
     }
 
     public function render() {
-        do_action('plugun_name/render_admin_app');
+        do_action('plugin_name/render_admin_app');
         wp_enqueue_script(
             'plugin_name',
             PLUGINNAME_URL . 'assets/js/plugin-main-js-file.js',

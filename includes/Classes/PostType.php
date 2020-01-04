@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Register and initialize custom post type for plugun_name
+ * Register and initialize custom post type for plugin_name
  * @since 1.0.0
  */
 
@@ -30,7 +30,7 @@ class PostType {
             'public'          => false,
             'show_ui'         => false,
         );
-        register_post_type( 'plugun_name', $args );
+        register_post_type( 'plugin_name', $args );
     }
 
 }

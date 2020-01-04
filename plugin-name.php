@@ -38,7 +38,7 @@ if (!defined('PLUGINNAME_VERSION')) {
     define('PLUGINNAME_MAIN_FILE', __FILE__);
     define('PLUGINNAME_URL', plugin_dir_url(__FILE__));
     define('PLUGINNAME_DIR', plugin_dir_path(__FILE__));
-    define('PLUGINNAME_UPLOAD_DIR', '/plugun_name');
+    define('PLUGINNAME_UPLOAD_DIR', '/plugin_name');
 
     class PluginName
     {
@@ -57,7 +57,7 @@ if (!defined('PLUGINNAME_VERSION')) {
             $menu = new \PluginName\Classes\Menu();
             $menu->register();
 
-            add_action('plugun_name/render_admin_app', function () {
+            add_action('plugin_name/render_admin_app', function () {
                 $adminApp = new \PluginName\Classes\AdminApp();
                 $adminApp->bootView();
             });
@@ -74,7 +74,7 @@ if (!defined('PLUGINNAME_VERSION')) {
 
         public function textDomain()
         {
-            load_plugin_textdomain('plugun_name', false, basename(dirname(__FILE__)) . '/languages');
+            load_plugin_textdomain('plugin_name', false, basename(dirname(__FILE__)) . '/languages');
         }
 
     }
