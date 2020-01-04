@@ -2,7 +2,6 @@
 
 #### A simple boilerplate plugin for WordPress using vue js.
 
-
 ## How to use:
 
 * Clone this repository on your `plugin folder`
@@ -29,3 +28,15 @@
 #### now your plugin is ready to use with a standard format.
 #### All You can use vue js on `/src` folder
 #### Do any customization you need
+
+ ## NB: These 3 plugins are already installed on this project, You can use those or remove that you don't need.
+ * element-ui
+ * vue-router
+ * @Wordpress/hooks
+ For more details please check the `package.json` file
+ 
+ ### For Help:
+ Please fell free to mail me <a href="mailto:hasanuzzamanbe@gmail.com">hasanuzzamanbe@gmail.com</a>
+ 
+ For faster response please text me on https://www.hasanuzzaman.com live chat.
+ 
