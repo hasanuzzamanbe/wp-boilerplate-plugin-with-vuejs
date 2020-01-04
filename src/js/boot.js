@@ -1,3 +1,3 @@
-import ShamimHasan from './plugin_name';
+import PluginName from './plugin_name';
 
-window.ShamimHasan = new ShamimHasan();
+window.PluginName = new PluginName();
