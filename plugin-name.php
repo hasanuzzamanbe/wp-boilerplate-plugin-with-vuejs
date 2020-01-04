@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: shamim
+Plugin Name: plugin_name
 Plugin URI: #
 Description: A WordPress boilerplate plugin with Vue js.
 Version: 1.0.0
