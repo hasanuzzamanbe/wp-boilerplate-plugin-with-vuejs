@@ -11,7 +11,15 @@
 * Run command `npm run watch` 
 
 * Check the plugin page of your WordPress and activate the plugin
+# 1. Auto setup:
+Just run `node src/setup`
+it will ask for a plugin name, enter your plugin name and hit enter.
 
+Your plugin is ready to use Now.
+
+or
+
+# 2. Manual Setup
 
 ## Step to make your own plugin
 
