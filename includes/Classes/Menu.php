@@ -18,7 +18,7 @@ class Menu
             return;
         }
 
-        $title = __('Plugin Name', 'textdomain');
+        $title = __('YourPlugin', 'textdomain');
         global $submenu;
         add_menu_page(
             $title,

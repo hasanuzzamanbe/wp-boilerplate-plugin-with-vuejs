@@ -57,7 +57,7 @@ rl.question("Please enter your plugin Name:", function(answer) {
   
 
   // For entry file selection
-  glob("plugin-entry-file.php", function(err, files) {
+  glob("plugin-name.php", function(err, files) {
         files.forEach(function(item, index, array) {
           
           var data = fs.readFileSync(item, 'utf8');
@@ -127,12 +127,13 @@ rl.question("Please enter your plugin Name:", function(answer) {
          
 
             var mapObj = {
+              YourPlugin: answer,
               PluginName: Camel,
               plugin_name: Slug,
               PLUGINNAME: Uppercase,
               pluginname: Lowercase
            };
-           var result = data.replace(/pluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
+           var result = data.replace(/YourPlugin|pluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
              return mapObj[matched];
            });
   
