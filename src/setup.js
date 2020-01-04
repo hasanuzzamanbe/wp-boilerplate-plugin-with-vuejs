@@ -4,14 +4,14 @@ var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-function convertToSlug(Text)
-{
-    return Text
-        .toLowerCase()
-        .replace(/ /g,'-')
-        .replace(/[^\w-]+/g,'')
-        ;
-}
+// function convertToSlug(Text)
+// {
+//     return Text
+//         .toLowerCase()
+//         .replace(/ /g,'-')
+//         .replace(/[^\w-]+/g,'')
+//         ;
+// }
 
 
 rl.question("Please enter your plugin Name:", function(answer) {
@@ -22,14 +22,29 @@ rl.question("Please enter your plugin Name:", function(answer) {
   // var replace = require("replace");
   
   // Find file(s)
-  glob('plugin-name.php', function(err, files) {
+  glob("!(node_modules)/*/*.*", function(err, files) {
       if (err) { throw err; }
-      console.log(files);
+      // console.log(files);
       files.forEach(function(item, index, array) {
-            console.log(item + ' found');
-            // Read file
+            // console.log(item + ' found');
+            // Read fileclear
             var data = fs.readFileSync(item, 'utf8');
-            var result = data.replace(/CrudProject/g, answer);
+            // console.log(data);
+            var result = data.replace(/PluginName/g, answer);
+            // console.log(item,'item')
+
+          //   var mapObj = {
+          //     pluginName:"dog",
+          //     plugin_name:"goat",
+          //     plugin_name:"cat"
+          //  };
+          //  str = str.replace(/cat|dog|goat/gi, function(matched){
+          //    return mapObj[matched];
+          //  });
+
+
+
+
             // var result = data.replace(/plugin-name/g, 'shamim');
   
             fs.writeFile(item, result, 'utf8', function (err) {
