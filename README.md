@@ -17,7 +17,7 @@
 
 * Open with an IDE (Vscode, sublime, PhpStorm etc)
 
-* Change all the   `plugin-name` to Your-Plugin-Name 
+* Change all the   `plugin_name` to Your-Plugin-Name 
 * Change all the   `PLUGINNAME`  to YOURPLUGINNAME    (Upper case)
 * Change all the   `PluginName`  to YourPluginName    (Upper Camel Case)
 * Change all the   `Plugin_Name` to your_plugin_name

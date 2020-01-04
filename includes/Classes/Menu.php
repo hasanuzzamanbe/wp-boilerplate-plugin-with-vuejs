@@ -50,7 +50,7 @@ class Menu
     public function render() {
         do_action('plugun_name/render_admin_app');
         wp_enqueue_script(
-            'plugin-name',
+            'plugin_name',
             PLUGINNAME_URL . 'assets/js/plugin-name.js',
             array( 'jquery' ),
             PLUGINNAME_VERSION,

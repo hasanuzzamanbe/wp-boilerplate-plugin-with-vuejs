@@ -4,14 +4,48 @@ var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-// function convertToSlug(Text)
-// {
-//     return Text
-//         .toLowerCase()
-//         .replace(/ /g,'-')
-//         .replace(/[^\w-]+/g,'')
-//         ;
-// }
+
+function convertToSlug(Text)
+{
+    return Text
+        .toLowerCase()
+        .replace(/ /g,'-')
+        .replace(/[^\w-]+/g,'')
+        ;
+}
+function convertToLowercase(Text)
+{
+    return Text
+        .toLowerCase()
+        .replace(/ /g,'')
+        .replace(/[^\w-]+/g,'')
+        ;
+}
+
+function camalize(str) {
+  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, function(match, chr)
+  {
+      return chr.toUpperCase();
+  });
+}
+
+function convertToUpperCamel(Text)
+{
+    return Text
+        .to()
+        .replace(/ /g,'')
+        .replace(/[^\w-]+/g,'')
+        ;
+}
+
+function convertToUppercase(Text)
+{
+    return Text
+        .toUpperCase()
+        .replace(/ /g,'')
+        .replace(/[^\w-]+/g,'')
+        ;
+}
 
 
 rl.question("Please enter your plugin Name:", function(answer) {
@@ -30,27 +64,36 @@ rl.question("Please enter your plugin Name:", function(answer) {
             // Read fileclear
             var data = fs.readFileSync(item, 'utf8');
             // console.log(data);
-            var result = data.replace(/PluginName/g, answer);
+            // var result = data.replace(/PluginName/g, answer);
+
             // console.log(item,'item')
 
-          //   var mapObj = {
-          //     pluginName:"dog",
-          //     plugin_name:"goat",
-          //     plugin_name:"cat"
-          //  };
-          //  str = str.replace(/cat|dog|goat/gi, function(matched){
+       
+            var Uppercase = convertToUppercase(answer);
+            var Lowercase = convertToLowercase(answer);
+            var Slug      = convertToSlug(answer);
+            var Camel     = camalize(answer);
+         
+
+            var mapObj = {
+              PluginName: Camel,
+              plugin_name: Slug,
+              PLUGINNAME: Uppercase,
+              pluginname: Lowercase
+           };
+          //  var result = data.replace(/pluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
           //    return mapObj[matched];
           //  });
 
 
 
 
-            // var result = data.replace(/plugin-name/g, 'shamim');
+            // var result = data.replace(/plugin_name/g, 'shamim');
   
-            fs.writeFile(item, result, 'utf8', function (err) {
-                if (err) return console.log(err);
-            });
-            console.log('Replacement complete');
+            // fs.writeFile(item, result, 'utf8', function (err) {
+            //     if (err) return console.log(err);
+            // });
+            // console.log('Replacement complete');
         });
   });
 
@@ -78,7 +121,7 @@ rl.question("Please enter your plugin Name:", function(answer) {
 
 /* Read a file */
 
-// fs.readFile("../plugin-name.php", function(err, buf) {
+// fs.readFile("../plugin_name.php", function(err, buf) {
 //   console.log(buf);
 // });
 
