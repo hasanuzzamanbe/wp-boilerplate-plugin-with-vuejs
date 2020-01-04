@@ -1,3 +1,3 @@
-import PluginName from './plugin_name';
+import PluginName from './plugin_main_js_file';
 
 window.PluginName = new PluginName();
