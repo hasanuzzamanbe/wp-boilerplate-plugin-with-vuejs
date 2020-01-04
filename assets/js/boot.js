@@ -78144,9 +78144,9 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/js/Boot.js":
+/***/ "./src/js/boot.js":
 /*!************************!*\
-  !*** ./src/js/Boot.js ***!
+  !*** ./src/js/boot.js ***!
   \************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -78331,12 +78331,12 @@ function () {
 
 /***/ 0:
 /*!******************************!*\
-  !*** multi ./src/js/Boot.js ***!
+  !*** multi ./src/js/boot.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/zoos/Downloads/sites/wp/wp-content/plugins/wp-boilerplate-plugin-with-vuejs/src/js/Boot.js */"./src/js/Boot.js");
+module.exports = __webpack_require__(/*! /home/xaaman/Projects/wp/wp-content/plugins/wp-boilerplate-plugin-with-vuejs/src/js/boot.js */"./src/js/boot.js");
 
 
 /***/ })
