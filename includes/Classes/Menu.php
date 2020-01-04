@@ -51,7 +51,7 @@ class Menu
         do_action('plugun_name/render_admin_app');
         wp_enqueue_script(
             'plugin_name',
-            PLUGINNAME_URL . 'assets/js/plugin-name.js',
+            PLUGINNAME_URL . 'assets/js/plugin-main-js-file.js',
             array( 'jquery' ),
             PLUGINNAME_VERSION,
             true

@@ -81,18 +81,18 @@ rl.question("Please enter your plugin Name:", function(answer) {
               PLUGINNAME: Uppercase,
               pluginname: Lowercase
            };
-          //  var result = data.replace(/pluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
-          //    return mapObj[matched];
-          //  });
+           var result = data.replace(/pluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
+             return mapObj[matched];
+           });
 
 
 
 
             // var result = data.replace(/plugin_name/g, 'shamim');
   
-            // fs.writeFile(item, result, 'utf8', function (err) {
-            //     if (err) return console.log(err);
-            // });
+            fs.writeFile(item, result, 'utf8', function (err) {
+                if (err) return console.log(err);
+            });
             // console.log('Replacement complete');
         });
   });
