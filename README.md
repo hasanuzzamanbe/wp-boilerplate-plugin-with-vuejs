@@ -16,6 +16,7 @@ Just run `node src/setup`
 it will ask for a plugin name, enter your plugin name and hit enter.
 
 Your plugin is ready to use Now.
+run `npm run watch`
 
 or
 
