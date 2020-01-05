@@ -7,20 +7,19 @@
 * Clone this repository on your `plugin folder`
 
 * Run command `npm i` to install node 
-
-* Run command `npm run watch` 
-
-* Check the plugin page of your WordPress and activate the plugin
-# 1. Auto setup:
+Now just setup for your own plugin, it's very easy using node auto command.
+##### 1. Auto setup:
 Just run `node src/setup`
 it will ask for a plugin name, enter your plugin name and hit enter.
 
-Your plugin is ready to use Now.
-run `npm run watch`
+Your plugin is ready to use.
 
-or
+Now run `npm run watch`
+Then activate the plugin from your WP admin dashboard.
 
-# 2. Manual Setup
+If you want to make setup by hand you can do it also. But auto setup is the best option for you.
+
+<details><summary>Or Manual Setup</summary>
 
 ## Step to make your own plugin
 
@@ -32,6 +31,7 @@ or
 * Change all the   `Plugin_Name` to your_plugin_name
 * Change all the   `textdomain`  to yourtextdomain
 
+</details>
 
 ## All done have fun
 #### now your plugin is ready to use with a standard format.
