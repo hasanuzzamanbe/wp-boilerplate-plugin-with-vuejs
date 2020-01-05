@@ -52,6 +52,7 @@ function convertToUppercase(Text)
 rl.question("Please enter your plugin Name:", function(answer) {
   // TODO: Log the answer in a database
   // console.log("Your plugin Name slug is: "+' '+ convertToSlug(answer));
+  answer = answer.replace(/\s+$/, '');
   var glob = require('glob');
   var fs = require('fs');
   
