@@ -36,7 +36,13 @@ class Activator
 
     private function migrate()
     {
-        $this->createBookmarkTable();
+        /*
+        * database creation commented out, 
+        * If you need any database just active this function bellow 
+        * and write your own query at createBookmarkTable function
+        */
+
+        // $this->createBookmarkTable();
     }
 
     public function createBookmarkTable()
