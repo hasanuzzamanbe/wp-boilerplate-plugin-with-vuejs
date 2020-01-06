@@ -16,7 +16,7 @@ window.PluginName.Vue.mixin({
 import {routes} from './routes'
 
 const router = new window.PluginName.Router({
-    routes: window.PluginName.applyFilters('pluginName_global_vue_routes', routes),
+    routes: window.PluginName.applyFilters('PluginName_global_vue_routes', routes),
     linkActiveClass: 'active'
 });
 

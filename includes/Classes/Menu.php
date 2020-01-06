@@ -67,13 +67,13 @@ class Menu
             wp_enqueue_script('plugin_name_admin_app', PLUGINNAME_URL.'assets/js/plugin_name.js', array('wppayform_boot'), PLUGINNAME_VERSION, true);
             // wp_enqueue_style('plugin_name_admin_app', PLUGINNAME_URL.'assets/css/plugin_name-admin.css', array(), PLUGINNAME_VERSION);
 
-            $pluginNameAdminVars = apply_filters('plugin_name/admin_app_vars',array(
+            $PluginNameAdminVars = apply_filters('plugin_name/admin_app_vars',array(
                 // 'image_upload_url' => admin_url('admin-ajax.php?action=wpf_global_settings_handler&route=wpf_upload_image'),
                 'assets_url' => PLUGINNAME_URL.'assets/',
                 'ajaxurl' => admin_url('admin-ajax.php')
             ));
 
-            wp_localize_script('plugin_name_boot', 'PluginNameAdmin', $pluginNameAdminVars);
+            wp_localize_script('plugin_name_boot', 'PluginNameAdmin', $PluginNameAdminVars);
         
     }
 

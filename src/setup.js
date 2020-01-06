@@ -73,7 +73,7 @@ rl.question("Please enter your plugin Name:", function(answer) {
             PLUGINNAME: Uppercase,
             pluginname: Lowercase
          };
-         var result = data.replace(/pluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
+         var result = data.replace(/PluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
            return mapObj[matched];
          });
           fs.writeFile(item, result, 'utf8', function (err) {
@@ -99,7 +99,7 @@ rl.question("Please enter your plugin Name:", function(answer) {
                 PLUGINNAME: Uppercase,
                 pluginname: Lowercase
              };
-             var result = data.replace(/pluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
+             var result = data.replace(/PluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
                return mapObj[matched];
              });
               fs.writeFile(item, result, 'utf8', function (err) {
@@ -134,7 +134,7 @@ rl.question("Please enter your plugin Name:", function(answer) {
               PLUGINNAME: Uppercase,
               pluginname: Lowercase
            };
-           var result = data.replace(/YourPlugin|pluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
+           var result = data.replace(/YourPlugin|PluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
              return mapObj[matched];
            });
   
