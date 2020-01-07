@@ -36,15 +36,4 @@ export default class PluginName {
         return window.jQuery.getJSON(window.PluginNameAdmin.ajaxurl, options);
     }
 
-    $post(options) {
-        return window.jQuery.post(window.PluginNameAdmin.ajaxurl, options);
-    }
-
-    $adminPost(options) {
-        options.action = 'plugin_name_admin_ajax';
-        return window.jQuery.post(window.PluginNameAdmin.ajaxurl, options);
-    }
-    $getJSON(options) {
-        return window.jQuery.getJSON(window.PluginNameAdmin.ajaxurl, options);
-    }
 }
