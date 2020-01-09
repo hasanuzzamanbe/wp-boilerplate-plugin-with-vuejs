@@ -79,7 +79,7 @@ rl.question("Please enter your plugin Name:", function(answer) {
           fs.writeFile(item, result, 'utf8', function (err) {
               if (err) return console.log(err);
           });
-          console.log('Replacement complete');
+          console.log('Plugin Entry file generated.');
       });
   });
 
@@ -105,7 +105,7 @@ rl.question("Please enter your plugin Name:", function(answer) {
               fs.writeFile(item, result, 'utf8', function (err) {
                   if (err) return console.log(err);
               });
-              console.log('Replacement complete');
+              console.log('Class making Successful !');
           });
   });
 
@@ -141,13 +141,16 @@ rl.question("Please enter your plugin Name:", function(answer) {
             fs.writeFile(item, result, 'utf8', function (err) {
                 if (err) return console.log(err);
             });
-            console.log('Replacement complete');
+            console.log('file:('+item +') '+'=>Generated');
         });
+        console.log(`All File Processed Successfully! 
+        Now run "npm run watch" and activate your plugin.
+        Thanks from https://www.hasanuzzaman.com`)
   });
 
   fs.unlink('_config.yml', (err) => {
     if (err) {
-      console.error(err)
+      console.log('No unused file here')
       return
     }
     console.log('unused file removed');
