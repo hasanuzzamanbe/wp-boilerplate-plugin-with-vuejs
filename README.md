@@ -44,6 +44,16 @@ If you want to make setup by hand you can do it also. But auto setup is the best
  * @Wordpress/hooks
  For more details please check the `package.json` file
  
+ 
+ ### After Development Production:
+ When your Plugin development complete and you want to use for production. Then run `npm run prod` after that you can delete some files which are already build.
+ 
+ Files/Folder you should delete on production:
+ * node modules 
+ * src
+ * package-lock.json
+ 
+ 
  ### For Help:
  Please fell free to mail me <a href="mailto:hasanuzzamanbe@gmail.com">hasanuzzamanbe@gmail.com</a>
  
