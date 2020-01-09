@@ -1,4 +1,4 @@
-# wp-boilerplate-plugin-with-vuejs
+# WordPress boilerplate plugin with Vue.js
 
 #### A simple boilerplate plugin for WordPress using vue js.
 
@@ -34,11 +34,15 @@ If you want to make setup by hand you can do it also. But auto setup is the best
 </details>
 
 ## All done have fun
-#### now your plugin is ready to use with a standard format.
-#### All You can use vue js on `/src` folder
-#### Do any customization you need
 
- ## NB: These 3 plugins are already installed on this project, You can use those or remove that you don't need.
+
+# Some suggestions for beginners:
+
+#### Now your plugin is ready to use with a standard format.
+#### You can write vue js codes on `/src` folder
+#### Do any customization you need.
+
+ ### NB: These 3 plugins are already installed on this project, You can use those or remove that if you don't need.
  * element-ui
  * vue-router
  * @Wordpress/hooks
@@ -55,7 +59,7 @@ If you want to make setup by hand you can do it also. But auto setup is the best
  
  
  ### For Help:
- Please fell free to mail me <a href="mailto:hasanuzzamanbe@gmail.com">hasanuzzamanbe@gmail.com</a>
+ Please feel free to mail me <a href="mailto:hasanuzzamanbe@gmail.com">hasanuzzamanbe@gmail.com</a>
  
  For faster response please text me on https://www.hasanuzzaman.com live chat.
  
