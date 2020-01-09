@@ -145,7 +145,13 @@ rl.question("Please enter your plugin Name:", function(answer) {
         });
   });
 
-
+  fs.unlink('_config.yml', (err) => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    console.log('unused file removed');
+  })
   // Closing all inputs
   rl.close();
 });
