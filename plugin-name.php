@@ -62,14 +62,6 @@ if (!defined('PLUGINNAME_VERSION')) {
                 $adminApp->bootView();
             });
 
-          
-            wp_enqueue_script(
-                'plugin_name_vue_loaded',
-                PLUGINNAME_URL . 'assets/js/boot.js',
-                array( 'jquery' ),
-                PLUGINNAME_VERSION,
-                true
-            );
         }
 
         public function textDomain()
