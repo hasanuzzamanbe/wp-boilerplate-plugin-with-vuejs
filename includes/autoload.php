@@ -2,7 +2,7 @@
 /**
  * Autoloader
  *
- * @package WPPayForm
+ * @package PluginName
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
