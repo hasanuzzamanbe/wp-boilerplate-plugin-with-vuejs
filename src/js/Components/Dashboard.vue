@@ -12,10 +12,10 @@
                     </el-col>
                     <el-col>
                         <el-button type="primary" 
-                                    plain
-                                    size="small"
-                                    @click="reDirrect()"
-                                    >Powered by Vue.js. Learn More about Vue Js</el-button>
+                            plain
+                            size="small"
+                            @click="reDirrect()"
+                            >Powered by Vue.js. Learn More about Vue Js</el-button>
                     </el-col>
                 </el-row>  
             </el-main>
