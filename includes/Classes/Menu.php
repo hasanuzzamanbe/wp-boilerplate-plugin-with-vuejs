@@ -8,7 +8,6 @@ class Menu
     public function register()
     {
         add_action( 'admin_menu', array($this, 'addMenus') );
-        add_action('wp_enqueue_scripts', array($this, 'enqueueAssets'));
     }
 
     public function addMenus()
@@ -25,7 +24,7 @@ class Menu
             $title,
             $menuPermission,
             'plugin_name.php',
-            array($this, 'render'),
+            array($this, 'enqueueAssets'),
             'dashicons-admin-site',
             25
         );
@@ -47,33 +46,24 @@ class Menu
         );
     }
 
-    public function render() {
+    public function enqueueAssets() {
         do_action('plugin_name/render_admin_app');
         wp_enqueue_script('plugin_name_boot', PLUGINNAME_URL.'assets/js/boot.js', array('jquery'), PLUGINNAME_VERSION, true);
-        // 3rd party developers can now add their scripts here
-        do_action('plugin_name/booting_admin_app');      
-        wp_enqueue_script(
-            'plugin_name',
-            PLUGINNAME_URL . 'assets/js/plugin-main-js-file.js',
-            array( 'plugin_name_boot' ),
-            PLUGINNAME_VERSION,
-            true
-        );
        
-    }
+        // 3rd party developers can now add their scripts here
+        do_action('plugin_name/booting_admin_app');     
+        wp_enqueue_script( 'plugin_name_js', PLUGINNAME_URL . 'assets/js/plugin-main-js-file.js', array( 'plugin_name_boot' ), PLUGINNAME_VERSION, true );
+       
+        //enque css file
+        wp_enqueue_style('plugin_name_admin_css', PLUGINNAME_URL.'assets/css/element.css');
 
-    public function enqueueAssets()
-    {
-            wp_enqueue_style('plugin_name_admin_app', PLUGINNAME_URL.'assets/css/plugin_name-admin.css', array(), PLUGINNAME_VERSION);
+        $PluginNameAdminVars = apply_filters('plugin_name/admin_app_vars',array(
+            // 'image_upload_url' => admin_url('admin-ajax.php?action=wpf_global_settings_handler&route=wpf_upload_image'),
+            'assets_url' => PLUGINNAME_URL.'assets/',
+            'ajaxurl' => admin_url('admin-ajax.php')
+        ));
 
-            $PluginNameAdminVars = apply_filters('plugin_name/admin_app_vars',array(
-                // 'image_upload_url' => admin_url('admin-ajax.php?action=wpf_global_settings_handler&route=wpf_upload_image'),
-                'assets_url' => PLUGINNAME_URL.'assets/',
-                'ajaxurl' => admin_url('admin-ajax.php')
-            ));
-
-            wp_localize_script('plugin_name_boot', 'PluginNameAdmin', $PluginNameAdminVars);
-        
+        wp_localize_script('plugin_name_boot', 'PluginNameAdmin', $PluginNameAdminVars);
     }
 
 }
