@@ -10,7 +10,7 @@
 Now just setup for your own plugin, it's very easy using node auto command.
 ##### 1. Auto setup:
 Just run `node src/setup`
-it will ask for a plugin name, enter your plugin name and hit enter.
+it will ask for a plugin name, type your plugin name and hit enter.
 
 Your plugin is ready to use.
 
