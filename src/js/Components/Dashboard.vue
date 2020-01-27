@@ -8,7 +8,7 @@
             <el-main>
                 <el-row>
                     <el-col>
-                        <img width="25%" src="https://vuejs.org/images/logo.png" alt="vue">
+                        <img width="300px" src="https://vuejs.org/images/logo.png" alt="vue">
                     </el-col>
                     <el-col>
                         <el-button type="primary" 
