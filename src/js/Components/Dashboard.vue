@@ -15,7 +15,7 @@
                             plain
                             size="small"
                             @click="reDirrect()"
-                            >Powered by Vue.js. Learn More about Vue Js</el-button>
+                            >Powered by Vue.js. Learn More about Vue Js <i class="el-icon-right"></i></el-button>
                     </el-col>
                 </el-row>  
             </el-main>
