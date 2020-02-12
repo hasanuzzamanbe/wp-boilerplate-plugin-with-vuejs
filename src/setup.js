@@ -50,7 +50,7 @@ function convertToUppercase(Text)
 
 
 rl.question("Please enter your plugin Name:", function(answer) {
-  // TODO: Log the answer in a database
+
   // console.log("Your plugin Name slug is: "+' '+ convertToSlug(answer));
   answer = answer.replace(/\s+$/, '');
   var glob = require('glob');
@@ -108,8 +108,6 @@ rl.question("Please enter your plugin Name:", function(answer) {
               console.log('Class making Successful !');
           });
   });
-
-
 
   // Find file(s) except node and entry
   glob("!(node_modules)/*/*.*", function(err, files) {
