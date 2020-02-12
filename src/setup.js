@@ -52,119 +52,128 @@ function convertToUppercase(Text)
 rl.question("Please enter your plugin Name:", function(answer) {
 
   // console.log("Your plugin Name slug is: "+' '+ convertToSlug(answer));
-  answer = answer.replace(/\s+$/, '');
-  var glob = require('glob');
-  var fs = require('fs');
+  if(!answer.includes("-")){
+    answer = answer.replace(/\s+$/, '');
+    var glob = require('glob');
+    var fs = require('fs');
+    
   
-
-  // For entry file selection
-  glob("plugin-name.php", function(err, files) {
-        files.forEach(function(item, index, array) {
-          
-          var data = fs.readFileSync(item, 'utf8');
-          var Uppercase = convertToUppercase(answer);
-          var Lowercase = convertToLowercase(answer);
-          var Slug      = convertToSlug(answer);
-          var Camel     = camalize(answer);
-      
-          var mapObj = {
-            PluginName: Camel,
-            plugin_name: Slug,
-            PLUGINNAME: Uppercase,
-            pluginname: Lowercase
-         };
-         var result = data.replace(/PluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
-           return mapObj[matched];
-         });
-          fs.writeFile(item, result, 'utf8', function (err) {
-              if (err) return console.log(err);
-          });
-          console.log('Plugin Entry file generated.');
-      });
-  });
-
-  glob("includes/autoload.php*", function(err, files) {
-
-    files.forEach(function(item, index, array) {
-          
-              var data = fs.readFileSync(item, 'utf8');
-              var Uppercase = convertToUppercase(answer);
-              var Lowercase = convertToLowercase(answer);
-              var Slug      = convertToSlug(answer);
-              var Camel     = camalize(answer);
-          
-              var mapObj = {
-                PluginName: Camel,
-                plugin_name: Slug,
-                PLUGINNAME: Uppercase,
-                pluginname: Lowercase
-             };
-             var result = data.replace(/PluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
-               return mapObj[matched];
-             });
-              fs.writeFile(item, result, 'utf8', function (err) {
-                  if (err) return console.log(err);
-              });
-              console.log('Class making Successful !');
-          });
-  });
-
-  // Find file(s) except node and entry
-  glob("!(node_modules)/*/*.*", function(err, files) {
-      if (err) { throw err; }
-  
-      files.forEach(function(item, index, array) {
-
-            // Read fileclear
+    // For entry file selection
+    glob("plugin-name.php", function(err, files) {
+          files.forEach(function(item, index, array) {
+            
             var data = fs.readFileSync(item, 'utf8');
-
-       
             var Uppercase = convertToUppercase(answer);
             var Lowercase = convertToLowercase(answer);
             var Slug      = convertToSlug(answer);
             var Camel     = camalize(answer);
-         
-
+        
             var mapObj = {
-              YourPlugin: answer,
               PluginName: Camel,
               plugin_name: Slug,
               PLUGINNAME: Uppercase,
               pluginname: Lowercase
            };
-           var result = data.replace(/YourPlugin|PluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
+           var result = data.replace(/PluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
              return mapObj[matched];
            });
-  
             fs.writeFile(item, result, 'utf8', function (err) {
                 if (err) return console.log(err);
             });
-            console.log('file:('+item +') '+'=>Generated');
+            console.log('✅ Plugin Entry file generated.');
         });
-        console.log(` 
+    });
+  
+    glob("includes/autoload.php*", function(err, files) {
+  
+      files.forEach(function(item, index, array) {
+            
+                var data = fs.readFileSync(item, 'utf8');
+                var Uppercase = convertToUppercase(answer);
+                var Lowercase = convertToLowercase(answer);
+                var Slug      = convertToSlug(answer);
+                var Camel     = camalize(answer);
+            
+                var mapObj = {
+                  PluginName: Camel,
+                  plugin_name: Slug,
+                  PLUGINNAME: Uppercase,
+                  pluginname: Lowercase
+               };
+               var result = data.replace(/PluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
+                 return mapObj[matched];
+               });
+                fs.writeFile(item, result, 'utf8', function (err) {
+                    if (err) return console.log(err);
+                });
+                console.log('✅ Class making Successful !');
+            });
+    });
+  
+    // Find file(s) except node and entry
+    glob("!(node_modules)/*/*.*", function(err, files) {
+        if (err) { throw err; }
     
-  _______ _______ _______ ________        _______________________ ______  
- (  ____ (  ___  (       (  ____ ( \      (  ____  \__   __(  ____ (  __  ) 
- | (    \ | (   ) | () () | (    )| (     | (     \/  ) (  | (     \| (  )  )
- | |     | |   | | || || | (____)| |     | (__      | |  | (__   | |   ) |
- | |     | |   | | |(_)| |  _____| |     |  __)     | |  |  __)  | |   | |
- | |     | |   | | |   | | (     | |     | (        | |  | (     | |   ) |
- | (____/| (___) | )   ( | )     | (____/| (____/\   | |  | (____/| (__/  )
- (_______(_______|/     (|/      (_______(_______/  )_(  (_______(______/ 
-                                                                                                          
-        All File Processed Successfully!
-        Now run "npm run watch" and activate your plugin.
-        Thanks from https://www.hasanuzzaman.com`)
-  });
+        files.forEach(function(item, index, array) {
+  
+              // Read fileclear
+              var data = fs.readFileSync(item, 'utf8');
+  
+         
+              var Uppercase = convertToUppercase(answer);
+              var Lowercase = convertToLowercase(answer);
+              var Slug      = convertToSlug(answer);
+              var Camel     = camalize(answer);
+           
+  
+              var mapObj = {
+                YourPlugin: answer,
+                PluginName: Camel,
+                plugin_name: Slug,
+                PLUGINNAME: Uppercase,
+                pluginname: Lowercase
+             };
+             var result = data.replace(/YourPlugin|PluginName|plugin_name|PLUGINNAME|pluginname/gi, function(matched){
+               return mapObj[matched];
+             });
+    
+              fs.writeFile(item, result, 'utf8', function (err) {
+                  if (err) return console.log(err);
+              });
+              console.log('✅ file:('+item +') '+'=>Generated');
+          });
+          console.log(` 
+      
+    _______ _______ _______ ________        _______________________ ______  
+   (  ____ (  ___  (       (  ____ ( \      (  ____  \__   __(  ____ (  __  ) 
+   | (    \ | (   ) | () () | (    )| (     | (     \/  ) (  | (     \| (  )  )
+   | |     | |   | | || || | (____)| |     | (__      | |  | (__   | |   ) |
+   | |     | |   | | |(_)| |  _____| |     |  __)     | |  |  __)  | |   | |
+   | |     | |   | | |   | | (     | |     | (        | |  | (     | |   ) |
+   | (____/| (___) | )   ( | )     | (____/| (____/\   | |  | (____/| (__/  )
+   (_______(_______|/     (|/      (_______(_______/  )_(  (_______(______/ 
+                                                                                                            
+          All File Processed Successfully!
+          Now run "npm run watch" and activate your plugin.
+          Thanks from https://www.hasanuzzaman.com`)
+    });
+  
+    fs.unlink('_config.yml', (err) => {
+      if (err) {
+        console.log('✅ No unused file here')
+        return
+      }
+      console.log('✅ unused file removed');
+    })
 
-  fs.unlink('_config.yml', (err) => {
-    if (err) {
-      console.log('No unused file here')
-      return
-    }
-    console.log('unused file removed');
-  })
-  // Closing all inputs
-  rl.close();
+    // Closing all inputs
+    rl.close();
+  }else {
+    var suggestion = answer.replace(/-/g, ' ');
+    console.log('⚠️ Warning: Please don\'t use hyfen. You may use '+ suggestion + ' as your plugin name');
+    console.log('⚠️ Please run again "node src/seup" and enter a unique plugin name.');
+  }
+ 
+ 
 });
 
