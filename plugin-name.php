@@ -57,6 +57,10 @@ if (!defined('PLUGINNAME_VERSION')) {
             $menu = new \PluginName\Classes\Menu();
             $menu->register();
 
+             // Top Level Ajax Handlers
+            $ajaxHandler = new \PluginName\Classes\AdminAjaxHandler();
+            $ajaxHandler->registerEndpoints();
+
             add_action('plugin_name/render_admin_app', function () {
                 $adminApp = new \PluginName\Classes\AdminApp();
                 $adminApp->bootView();
