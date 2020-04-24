@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ah1
- * Date: 2019-06-16
- * Time: 11:23
- */
 
 namespace PluginName\Classes;
 

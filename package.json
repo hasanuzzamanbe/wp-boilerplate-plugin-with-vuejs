@@ -12,18 +12,18 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
-    "@wordpress/hooks": "^2.4.0",
-    "element-ui": "^2.10.1",
-    "node-sass": "^4.13.1",
-    "sass": "^1.25.0",
+    "@wordpress/hooks": "^2.8.0",
+    "element-ui": "^2.13.1",
+    "node-sass": "^4.14.0",
+    "sass": "^1.26.5",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.7"
+    "vue-router": "^3.1.6"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0",
-    "laravel-mix": "^4.0.16",
-    "resolve-url-loader": "^3.1.0",
-    "sass-loader": "^7.3.1",
+    "cross-env": "^7.0.2",
+    "laravel-mix": "^5.0.4",
+    "resolve-url-loader": "^3.1.1",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.10"
   }
 }
