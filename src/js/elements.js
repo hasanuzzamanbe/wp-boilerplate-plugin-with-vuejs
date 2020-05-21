@@ -104,6 +104,9 @@ Vue.use(Transfer);
 Vue.use(DatePicker);
 Vue.use(Submenu);
 
+Vue.use(Loading.directive);
+Vue.prototype.$loading = Loading.service;
+
 Vue.prototype.$message = Message;
 Vue.prototype.$msgbox = MessageBox;
 Vue.prototype.$alert = MessageBox.alert;
