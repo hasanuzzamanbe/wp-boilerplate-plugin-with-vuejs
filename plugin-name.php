@@ -85,6 +85,16 @@ if (!defined('PLUGINNAME_VERSION')) {
         $activator->migrateDatabases($newWorkWide);
     });
 
+    // disabled admin-notice on dashboard
+    add_action('admin_init', function () {
+        $disablePages = [
+            'plugin_name.php',
+        ];
+        if (isset($_GET['page']) && in_array($_GET['page'], $disablePages)) {
+            remove_all_actions('admin_notices');
+        }
+    });
+
 } else {
     add_action('admin_init', function () {
         deactivate_plugins(plugin_basename(__FILE__));
