@@ -9,7 +9,8 @@ window.PluginName.Vue.mixin({
         $get: window.PluginName.$get,
         $adminGet: window.PluginName.$adminGet,
         $adminPost: window.PluginName.$adminPost,
-        $post: window.PluginName.$post
+        $post: window.PluginName.$post,
+        $publicAssets: window.PluginName.$publicAssets
     }
 });
 

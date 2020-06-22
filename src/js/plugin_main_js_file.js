@@ -14,6 +14,10 @@ export default class PluginName {
         this.Router = Router;
     }
 
+    $publicAssets(path){
+        return (window.PluginNameAdmin.assets_url + path);
+    }
+
     $get(options) {
         return window.jQuery.get(window.PluginNameAdmin.ajaxurl, options);
     }
