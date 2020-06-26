@@ -4,9 +4,10 @@
 
 ## How to use:
 
-* Clone this repository on your `plugin folder`
+* Clone this repository on your local `plugin folder`
 
-* Run command `npm i` to install node 
+* Run command `npm i` to install node modules.
+
 Now just setup for your own plugin, it's very easy using node auto command.
 ##### 1. Auto setup:
 Just run `node src/setup`
@@ -42,15 +43,16 @@ If you want to make setup by hand you can do it also. But auto setup is the best
 #### You can write vue js codes on `/src` folder
 #### Do any customization you need.
 
- ### NB: These 3 plugins are already installed on this project, You can use those or remove that if you don't need.
+ ### NB: These 3 packages are already installed on this project, You can use those or remove that if you don't need.
  * element-ui
  * vue-router
  * @Wordpress/hooks
+ 
  For more details please check the `package.json` file
  
  
  ### After Development Production:
- When your Plugin development complete and you want to use for production. Then run `npm run prod` after that you can delete some files which are already build.
+ When your Plugin development is complete and you want to use it for production. Then run `npm run prod` after that you can delete some files which are already build.
  
  Files/Folder you should delete on production:
  * node modules 
