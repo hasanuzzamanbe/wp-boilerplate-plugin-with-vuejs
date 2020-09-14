@@ -31,14 +31,13 @@ class Activator
         } else {
             $this->migrate();
         }
-
     }
 
     private function migrate()
     {
         /*
-        * database creation commented out, 
-        * If you need any database just active this function bellow 
+        * database creation commented out,
+        * If you need any database just active this function bellow
         * and write your own query at createBookmarkTable function
         */
 

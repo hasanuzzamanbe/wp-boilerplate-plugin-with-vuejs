@@ -2,7 +2,7 @@
 
 namespace PluginName\Classes;
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
@@ -11,7 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 
-class PostType {
+class PostType
+{
     public function __construct()
     {
         add_action('init', array( $this , 'register'));
@@ -24,7 +25,6 @@ class PostType {
             'public'          => false,
             'show_ui'         => false,
         );
-        register_post_type( 'plugin_name', $args );
+        register_post_type('plugin_name', $args);
     }
-
 }

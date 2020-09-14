@@ -2,7 +2,6 @@
 
 namespace PluginName\Classes;
 
-
 class AccessControl
 {
     public static function hasTopLevelMenuPermission()

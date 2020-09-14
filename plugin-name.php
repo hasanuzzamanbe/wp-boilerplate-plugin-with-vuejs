@@ -65,14 +65,12 @@ if (!defined('PLUGINNAME_VERSION')) {
                 $adminApp = new \PluginName\Classes\AdminApp();
                 $adminApp->bootView();
             });
-
         }
 
         public function textDomain()
         {
             load_plugin_textdomain('plugin_name', false, basename(dirname(__FILE__)) . '/languages');
         }
-
     }
 
     add_action('plugins_loaded', function () {
@@ -94,7 +92,6 @@ if (!defined('PLUGINNAME_VERSION')) {
             remove_all_actions('admin_notices');
         }
     });
-
 } else {
     add_action('admin_init', function () {
         deactivate_plugins(plugin_basename(__FILE__));

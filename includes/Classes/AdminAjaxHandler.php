@@ -2,14 +2,14 @@
 
 namespace PluginName\Classes;
 
-
-class AdminAjaxHandler {
-
+class AdminAjaxHandler
+{
     public function registerEndpoints()
     {
         add_action('wp_ajax_plugin_name_admin_ajax', array($this, 'handleEndPoint'));
     }
-    public function handleEndPoint() {
+    public function handleEndPoint()
+    {
         $route = sanitize_text_field($_REQUEST['route']);
 
         $validRoutes = array(
@@ -29,5 +29,4 @@ class AdminAjaxHandler {
         // write your sql queries here or another class, then send by a success response
         // wp_send_json_success($data);
     }
-
 }

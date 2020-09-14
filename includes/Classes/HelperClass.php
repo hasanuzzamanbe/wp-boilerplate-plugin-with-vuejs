@@ -1,7 +1,8 @@
-<?php 
+<?php
+
 namespace PluginName\Classes;
 
-class HelperClass {
-	
+class HelperClass
+{
 
 }
