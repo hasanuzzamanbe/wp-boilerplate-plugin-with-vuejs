@@ -1,7 +1,8 @@
 # WordPress boilerplate plugin with Vue.js
 
 #### A simple boilerplate plugin for WordPress using vue js.
-
+##### [ If you want to use framework base WordPress boilerplate with more advanced MVC pattern. Then check another one from here
+https://github.com/hasanuzzamanbe/framework-base-wp-boilerplate-with-vue ]
 ## How to use:
 
 * Clone this repository on your local `plugin folder`
