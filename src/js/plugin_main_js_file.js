@@ -39,5 +39,4 @@ export default class PluginName {
     $getJSON(options) {
         return window.jQuery.getJSON(window.PluginNameAdmin.ajaxurl, options);
     }
-
 }
