@@ -14,14 +14,14 @@ window.PluginName.Vue.mixin({
     }
 });
 
-import {routes} from './routes'
+import {routes} from './routes';
 
 const router = new window.PluginName.Router({
     routes: window.PluginName.applyFilters('PluginName_global_vue_routes', routes),
     linkActiveClass: 'active'
 });
 
-import App from './AdminApp'
+import App from './AdminApp';
 
 new window.PluginName.Vue({
     el: '#plugin_name_app',

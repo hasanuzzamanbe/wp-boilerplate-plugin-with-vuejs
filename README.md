@@ -41,7 +41,7 @@ If you want to make setup by hand you can do it also. But auto setup is the best
 # Some suggestions for beginners:
 
 #### Now your plugin is ready to use with a standard format.
-#### You can write vue js codes on `/src` folder
+#### You can write vue.js codes inside `/src` folder
 #### Do any customization you need.
 
  ### NB: These 3 packages are already installed on this project, You can use those or remove that if you don't need.
