@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "@wordpress/hooks": "^2.9.0",
-    "element-ui": "^2.13.2",
+    "element-ui": "^2.14.1",
     "node-sass": "^4.14.1",
-    "sass": "^1.26.10",
-    "vue": "^2.6.10",
-    "vue-router": "^3.4.2"
+    "sass": "^1.32.0",
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.9"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
