@@ -105,3 +105,4 @@ dist
 .tern-port
 
 assets/
+src/images/.DS_Store
