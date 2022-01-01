@@ -4,5 +4,4 @@ namespace PluginName\Classes;
 
 class HelperClass
 {
-
 }

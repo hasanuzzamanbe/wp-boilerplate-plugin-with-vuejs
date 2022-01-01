@@ -51,13 +51,13 @@ if (!defined('PLUGINNAME_VERSION')) {
 
         public function adminHooks()
         {
-            require PLUGINNAME_DIR.'includes/autoload.php';
+            require PLUGINNAME_DIR . 'includes/autoload.php';
 
             //Register Admin menu
             $menu = new \PluginName\Classes\Menu();
             $menu->register();
 
-             // Top Level Ajax Handlers
+            // Top Level Ajax Handlers
             $ajaxHandler = new \PluginName\Classes\AdminAjaxHandler();
             $ajaxHandler->registerEndpoints();
 

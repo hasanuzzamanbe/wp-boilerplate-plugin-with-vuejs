@@ -50,28 +50,28 @@ class Menu
         do_action('plugin_name/render_admin_app');
         wp_enqueue_script(
             'plugin_name_boot',
-            PLUGINNAME_URL.'assets/js/boot.js',
+            PLUGINNAME_URL . 'assets/js/boot.js',
             array('jquery'),
             PLUGINNAME_VERSION,
             true
         );
-       
+
         // 3rd party developers can now add their scripts here
         do_action('plugin_name/booting_admin_app');
         wp_enqueue_script(
             'plugin_name_js',
             PLUGINNAME_URL . 'assets/js/plugin-main-js-file.js',
-            array( 'plugin_name_boot' ),
+            array('plugin_name_boot'),
             PLUGINNAME_VERSION,
             true
         );
-       
+
         //enque css file
-        wp_enqueue_style('plugin_name_admin_css', PLUGINNAME_URL.'assets/css/element.css');
+        wp_enqueue_style('plugin_name_admin_css', PLUGINNAME_URL . 'assets/css/element.css');
 
         $PluginNameAdminVars = apply_filters('plugin_name/admin_app_vars', array(
             //'image_upload_url' => admin_url('admin-ajax.php?action=wpf_global_settings_handler&route=wpf_upload_image'),
-            'assets_url' => PLUGINNAME_URL.'assets/',
+            'assets_url' => PLUGINNAME_URL . 'assets/',
             'ajaxurl' => admin_url('admin-ajax.php')
         ));
 

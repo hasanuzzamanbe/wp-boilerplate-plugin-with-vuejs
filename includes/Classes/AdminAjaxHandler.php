@@ -17,7 +17,6 @@ class AdminAjaxHandler
         );
 
         if (isset($validRoutes[$route])) {
-            AccessControl::checkAndPresponseError($route, 'forms');
             do_action('plugin_name/doing_ajax_forms_' . $route);
             return $this->{$validRoutes[$route]}();
         }
