@@ -65,3 +65,9 @@ If you want to make setup by hand you can do it also. But auto setup is the best
  
  For faster response please text me on https://www.hasanuzzaman.com live chat.
  
+ <hr>
+ 
+### Other Setups you may Use
+* WordPress Plugin with Vue 3, tailwind (Vite Build) [https://github.com/hasanuzzamanbe/wp-boilerplate-vue-with-vite]
+* WordPress Plugin with Vue 3, tailwind (Laravel Mix Build) [https://github.com/hasanuzzamanbe/wp-plugin-with-vue-tailwind]
+ 
